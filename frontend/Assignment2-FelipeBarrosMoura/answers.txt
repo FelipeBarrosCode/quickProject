@@ -1,0 +1,21 @@
+We use BrowseRoute because is the provider to allow react router Dom to use the methods to navigate and create routes and if not put it there the Strict mode prohibits use the navigation
+
+If we forgot to pass the component as a prop for element when we went to the route specified that would not load the  <Component /> in the different route would give 404
+
+
+Use Navigate is the hook from react router Dom which provides us with the method navigate which allows through the react router to go to different endpoints listed on our App.jsx
+
+We need to wrap navigational around handle submit because we need to wait until the user submits the form to get th data to be sent a sa querry parameter
+
+The page would refresh in the same route and would not redirect the user to another route
+
+Empty dependency array mean that the useEffect will just run when the page first loads
+
+Avoid mismatch of lower and upper case
+
+Would set flight.from.toLowerCase() === flight.toLowerCase()
+
+
+It would not work because flights is an array of flights while flight card try to access properties from flight obj that are not defined in flights but instead in the objects inside flights
+
+I would create a Button called Book Now

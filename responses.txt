@@ -1,0 +1,16 @@
+1. To include the cookies in the request.
+
+2.The difference is that in localStorage the client will have acces to the token and the js as well however wityh httpOnly cookies the clint js will not work on the cookies and threrfore the safest option is the cookie.
+
+3. We send the user object because now the client js will not have acces to the token so we need to give back the data and we set on the backend the cookie not in teh frontend so no need to send back inthe body of the reponse the token
+
+4 We will not be able to id who is the user using the application
+
+5 Strict limit teh request to be made only from the same site we use that for auth related requsts the lax approach is balanced is meant to be used ony with secure mothods such as head and get used for general application.
+
+
+
+
+
+
+
