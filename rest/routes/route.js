@@ -5,12 +5,16 @@ const Flight = require('../models/Flight');
 const { body, validationResult } = require("express-validator");
 const rateLimit = require("express-rate-limit");
 const { verifyToken } = require('../middleware/auth');
+const cors = require('cors');
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,
   message: "Too many requests, please try again later.",
 });
+
+
+app.use(cors({ origin: 'https://quick-project-two.vercel.app', credentials: true }));
 
 router.use(limiter);
 
