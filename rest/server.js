@@ -10,10 +10,7 @@ dotenv.config();
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 const cors = require('cors');
-app.use(cors({
-origin: 'http://localhost:5173', // your React frontend
-credentials: true
-}));
+app.use(cors({ origin: 'https://quick-project-two.vercel.app', credentials: true }));
 
 mongoose
 .connect(process.env.MONGODB_URI)
