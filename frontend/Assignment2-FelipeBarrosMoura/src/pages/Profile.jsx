@@ -5,7 +5,7 @@ function Profile({ token }) {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/auth/me', {
+    fetch(`${import.meta.env.VITE_BACKEND_DOMAIN}/api/auth/me`, {
       credentials: 'include',
       headers: {
         Authorization: `Bearer ${token}`,

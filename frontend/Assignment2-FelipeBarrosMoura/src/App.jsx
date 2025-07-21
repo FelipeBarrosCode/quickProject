@@ -15,7 +15,7 @@ function App() {
  
   const [message, setMessage] = useState('');
   useEffect(() => {
-    fetch('http://localhost:4000/api/auth/me', {
+    fetch(`${import.meta.env.VITE_BACKEND_DOMAIN}/api/auth/me`, {
     credentials: 'include'
     })
     .then(res => res.ok ? res.json() : null)
@@ -29,7 +29,7 @@ function App() {
 
     
       const handleLogout = async () => {
-      await fetch('http://localhost:4000/api/auth/logout', {
+      await fetch(`${import.meta.env.VITE_BACKEND_DOMAIN}/api/auth/logout`, {
       method: 'POST',
       credentials: 'include'
       });

@@ -7,7 +7,7 @@ function FlightDetail({ token }) {
 
   useEffect(() => {
     const fetchFlight = async () => {
-      const res = await fetch(`http://localhost:4000/flights/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_DOMAIN}/flights/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

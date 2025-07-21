@@ -8,7 +8,7 @@ function Login({ onAuth, setMessage }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:4000/api/auth/login', {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_DOMAIN}/api/auth/login`, {
       method: 'POST',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
