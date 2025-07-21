@@ -13,7 +13,7 @@ export default function Navbar({ token, onLogout }) {
       <Link to="/" className="nav-link">Home</Link>
       {!token ? (
         <>
-          <Link to="/signin" className="nav-link">Login</Link>
+          <Link to="/login" className="nav-link">Login</Link>
           <Link to="/signup" className="nav-link">Signup</Link>
         </>
       ) : (
